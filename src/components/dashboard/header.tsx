@@ -14,22 +14,30 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Moon, Sun } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
-const toggleTheme = () => {
-  document.documentElement.classList.toggle('dark');
-};
+import { useEffect, useState } from "react";
 
 export function DashboardHeader() {
   const router = useRouter();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const isDark = document.documentElement.classList.contains('dark');
+    setIsDarkMode(isDark);
+  }, []);
+
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle('dark');
+    setIsDarkMode(prev => !prev);
+  };
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center gap-4 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 md:px-6">
       <SidebarTrigger className="md:hidden" />
       <div className="flex-1" />
-      {/* <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
+      <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
         <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
         <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      </Button> */}
+      </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-9 w-9 rounded-full">
