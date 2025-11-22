@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'DeepFlow Focus',
+  title: 'DeepFlow',
   description: 'Enhance your focus and achieve your flow state.',
 };
 
