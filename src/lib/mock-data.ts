@@ -1,3 +1,4 @@
+
 export const focusData = [
   { day: "Mon", focus: 65, optimal: 80 },
   { day: "Tue", focus: 72, optimal: 80 },
@@ -11,7 +12,7 @@ export const focusData = [
 export const sessionData = [
   { date: "2024-05-01", duration: 45 },
   { date: "2024-05-02", duration: 60 },
-  { date: "2024-_05-03", duration: 75 },
+  { date: "2024-05-03", duration: 75 },
   { date: "2024-05-04", duration: 50 },
   { date: "2024-05-05", duration: 90 },
   { date: "2024-05-06", duration: 120 },
