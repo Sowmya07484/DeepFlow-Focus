@@ -28,7 +28,7 @@ export function FocusChart() {
             bottom: 5,
           }}
         >
-          <CartesianGrid vertical={false} />
+          <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="hsl(var(--border))" />
           <XAxis
             dataKey="day"
             tickLine={false}

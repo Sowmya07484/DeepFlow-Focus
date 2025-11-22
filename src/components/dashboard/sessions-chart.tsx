@@ -25,7 +25,7 @@ export function SessionsChart() {
             bottom: 5,
           }}
         >
-          <CartesianGrid vertical={false} />
+          <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="hsl(var(--border))" />
           <XAxis
             dataKey="date"
             tickFormatter={(value) => format(new Date(value), "MMM d")}

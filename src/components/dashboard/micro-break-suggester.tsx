@@ -143,10 +143,10 @@ export function MicroBreakSuggester() {
           </form>
         </Form>
         {suggestion && (
-          <Alert className="mt-6 bg-accent/50 border-accent/60">
-            <Lightbulb className="h-4 w-4" />
-            <AlertTitle>AI Suggestion</AlertTitle>
-            <AlertDescription>{suggestion}</AlertDescription>
+          <Alert className="mt-6 bg-accent/20 border-accent/30 text-accent-foreground">
+            <Lightbulb className="h-4 w-4 text-accent" />
+            <AlertTitle className="text-accent-foreground/90">AI Suggestion</AlertTitle>
+            <AlertDescription className="text-accent-foreground/80">{suggestion}</AlertDescription>
           </Alert>
         )}
       </CardContent>
