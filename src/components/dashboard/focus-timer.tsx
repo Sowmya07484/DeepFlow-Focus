@@ -7,8 +7,8 @@ import { Progress } from '@/components/ui/progress';
 import { Pause, Play, RotateCcw } from 'lucide-react';
 
 export function FocusTimer() {
-  const totalTime = 25 * 60;
-  const [time, setTime] = useState(totalTime); // 25 minutes
+  const totalTime = 90 * 60;
+  const [time, setTime] = useState(totalTime); // 90 minutes
   const [isActive, setIsActive] = useState(false);
   const [isFlow, setIsFlow] = useState(false);
   
