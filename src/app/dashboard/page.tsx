@@ -4,6 +4,7 @@ import { FocusChart } from "@/components/dashboard/focus-chart";
 import { FocusSessionManager } from "@/components/dashboard/focus-session-manager";
 import { SessionsChart } from "@/components/dashboard/sessions-chart";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { OptimalFocusTimes } from "@/components/dashboard/optimal-focus-times";
 
 export default function DashboardPage() {
   return (
@@ -72,7 +73,10 @@ export default function DashboardPage() {
         </Card>
       </div>
       
-      <AISummary />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <AISummary />
+        <OptimalFocusTimes />
+      </div>
 
     </div>
   );

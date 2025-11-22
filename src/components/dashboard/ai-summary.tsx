@@ -30,11 +30,11 @@ export function AISummary() {
   }, []);
 
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Sparkles className="w-6 h-6 text-primary" />
-          <span>AI-Powered Weekly Summary</span>
+          <Sparkles className="w-5 h-5 text-primary" />
+          <span>AI Weekly Summary</span>
         </CardTitle>
         <CardDescription>
           Your personalized focus insights from the past week.

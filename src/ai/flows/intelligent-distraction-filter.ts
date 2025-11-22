@@ -32,7 +32,8 @@ const IntelligentDistractionFilterOutputSchema = z.object({
   shouldBlock: z
     .boolean()
     .describe(
-      'Whether the notification should be blocked (true) or allowed (false).'n    ),
+      'Whether the notification should be blocked (true) or allowed (false).'
+    ),
   reason: z
     .string()
     .describe('The reason for blocking or allowing the notification.'),
@@ -74,4 +75,3 @@ const intelligentDistractionFilterFlow = ai.defineFlow(
     return output!;
   }
 );
-
